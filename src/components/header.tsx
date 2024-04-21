@@ -5,7 +5,7 @@ export function Header() {
     const { t, i18n } = useTranslation();
     return (
         <div className="flex items-center gap-5 py-2 pt-0">
-            <nav className="navbar navbar-expand-lg bg-orange-600" data-bs-theme="light" style={{ 'backgroundColor': "#FFFF66" }}>
+            <nav className="navbar navbar-expand-lg" data-bs-theme="light" style={{ 'backgroundColor': "#FFFF66" }}>
                 <div className="container-fluid">
                     <a href="/" className="navbar-brand">
                         <h3 className="">{t('my name')}</h3>
