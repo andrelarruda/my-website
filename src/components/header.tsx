@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { NavItem } from './nav-item';
 
 export function Header() {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
     return (
         <div className="flex items-center gap-5 py-2 pt-0">
             <nav className="navbar navbar-expand-lg" data-bs-theme="light" style={{ 'backgroundColor': "#FFFF66" }}>
