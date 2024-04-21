@@ -14,6 +14,7 @@ const resources = {
             "projects": "Projects",
             "contact": "Contact",
             "my name": "Andre Arruda",
+            "footer all rights": "Andre Arruda. All rights reserved",
         }
     },
     pt: {
@@ -25,6 +26,7 @@ const resources = {
             "projects": "Projetos",
             "contact": "Contato",
             "my name": "André Arruda",
+            "footer all rights": "Andre Arruda. Todos os direitos reservados",
         }
     },
     fr: {
