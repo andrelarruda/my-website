@@ -1,12 +1,16 @@
 import { Header } from '../components/header'
 import { Footer } from '../components/footer'
 
-function App() {
+interface AppProps {
+  children: any
+}
+
+function App( props: AppProps) {
 
   return (
     <>
       <Header />
-      <div>Application content</div>
+      <div className='container'>{ props.children }</div>
       <Footer />
     </>
   )

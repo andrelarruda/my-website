@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './i18n'
-import App from './pages/app'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -11,33 +10,41 @@ import {
 import "bootstrap/dist/css/bootstrap.min.css"
 // Bootstrap Bundle JS
 import "bootstrap/dist/js/bootstrap.bundle.min"
+
+import App from './pages/app'
 import { ErrorPage } from './pages/error-page'
+import { AboutPage } from './pages/about-page'
+import { ExperiencesPage } from './pages/experiences-page'
+import { SkillsPage } from './pages/skills-page'
+import { ContactPage } from './pages/contact-page'
+import { ProjectsPage } from './pages/projects-page'
+import { HomePage } from './pages/home-page'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <App><HomePage /></App>,
     errorElement: <ErrorPage />
   },
   {
     path: "/about",
-    element: <div>About page</div>
+    element: <App><AboutPage /></App>
   },
   {
     path: "/experiences",
-    element: <div>Experiences page</div>
+    element: <App><ExperiencesPage /></App>
   },
   {
     path: "/skills",
-    element: <div>Skills page</div>
+    element: <App><SkillsPage /></App>
   },
   {
     path: "/projects",
-    element: <div>Projects page</div>
+    element: <App><ProjectsPage /></App>
   },
   {
     path: "/contact",
-    element: <div>Contact page</div>
+    element: <App><ContactPage /></App>
   },
 ]);
 
