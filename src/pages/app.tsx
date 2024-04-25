@@ -1,19 +1,56 @@
-import { Header } from '../components/header'
-import { Footer } from '../components/footer'
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from 'react-router-dom'
 
-interface AppProps {
-  children: any
-}
+import { HomePage } from './home-page'
+import { AboutPage } from './about-page'
+import { ExperiencesPage } from './experiences-page'
+import { SkillsPage } from './skills-page'
+import { ProjectsPage } from './projects-page'
+import { ContactPage } from './contact-page'
+import { RootLayout } from '../layouts/root-layout'
+import { ErrorPage } from './error-page'
 
-function App( props: AppProps) {
 
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <RootLayout />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: '',
+        element: <HomePage />,
+      },
+      {
+        path: 'about',
+        element: <AboutPage />,
+      },
+      {
+        path: 'experiences',
+        element: <ExperiencesPage />
+      },
+      {
+        path: 'skills',
+        element: <SkillsPage />
+      },
+      {
+        path: 'projects',
+        element: <ProjectsPage />
+      },
+      {
+        path: 'contact',
+        element: <ContactPage />
+      },
+    ],
+  }
+])
+
+export function App() {
   return (
     <>
-      <Header />
-      <div className='container'>{ props.children }</div>
-      <Footer />
+      <RouterProvider router={router} />
     </>
   )
 }
-
-export default App
